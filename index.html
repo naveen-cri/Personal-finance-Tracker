@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Personal Finance Tracker</h1>
+        <p>Track income and expenses, then monitor your running balance.</p>
+      </header>
+
+      <section class="card">
+        <h2>Add transaction</h2>
+        <form id="transaction-form">
+          <label>
+            Description
+            <input id="description" type="text" required placeholder="Groceries" />
+          </label>
+          <label>
+            Amount
+            <input id="amount" type="number" step="0.01" required placeholder="-45.99" />
+          </label>
+          <label>
+            Type
+            <select id="type">
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+          </label>
+          <button type="submit">Add transaction</button>
+        </form>
+      </section>
+
+      <section class="card summary">
+        <h2>Summary</h2>
+        <div class="stats">
+          <div>
+            <span>Income</span>
+            <strong id="income-total">$0.00</strong>
+          </div>
+          <div>
+            <span>Expenses</span>
+            <strong id="expense-total">$0.00</strong>
+          </div>
+          <div>
+            <span>Balance</span>
+            <strong id="balance-total">$0.00</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Transactions</h2>
+        <ul id="transaction-list"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
